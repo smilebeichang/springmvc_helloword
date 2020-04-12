@@ -1,5 +1,9 @@
 package net.xiaopang.dto;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 /**
  * @description:
  * @author: Mr.songbeichang
@@ -10,6 +14,16 @@ public class Student {
     private String name;
     private Integer age;
     private String address;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public String getName() {
         return name;
@@ -41,7 +55,17 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
+                ", birthday=" + birthday +
                 '}';
+    }
+
+    public Student(String name, Integer age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    public Student() {
     }
 }
 

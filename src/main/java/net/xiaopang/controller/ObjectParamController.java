@@ -26,6 +26,18 @@ public class ObjectParamController extends Log4JController {
         return "success";
     }
 
+    @RequestMapping("/to_ce")
+    protected  String toCe(String username){
+        logger.debug(username);
+        return "CharacterEncoding";
+    }
+
+    @RequestMapping("/ce")
+    protected  String CharacterEncoding(String username){
+        logger.debug(username);
+        return "success";
+    }
+
 }
 
 

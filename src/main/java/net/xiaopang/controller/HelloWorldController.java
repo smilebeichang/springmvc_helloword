@@ -1,6 +1,7 @@
 package net.xiaopang.controller;
 
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 import javax.servlet.http.*;
@@ -11,7 +12,7 @@ import javax.servlet.http.*;
  * @create: 2020-04-10 21:12
  **/
 @org.springframework.stereotype.Controller("/helloWorldController")
-public class HelloWorldController implements Controller {
+public class HelloWorldController extends Log4JController implements Controller {
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
@@ -20,6 +21,8 @@ public class HelloWorldController implements Controller {
         modelAndView.setViewName("helloWorld");
         return modelAndView;
     }
+
+
 }
 
 

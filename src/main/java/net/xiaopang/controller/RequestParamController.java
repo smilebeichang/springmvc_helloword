@@ -29,6 +29,16 @@ public class RequestParamController extends Log4JController {
         return "success";
     }
 
+
+    /**
+     * 内置转换器
+     * Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'
+     */
+    @RequestMapping("/to_cover")
+    public String cover(@RequestParam("id")Integer id){
+        logger.debug("请求参数:"+id);
+        return "success";
+    }
 }
 
 

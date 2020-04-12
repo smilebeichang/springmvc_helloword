@@ -16,6 +16,7 @@
         <label>name:</label><input type="text" name="name"><BR>
         <label>age:</label><input type="text" name="age"><BR>
         <label>address:</label><input type="text" name="address"><BR>
+        <label>birthday:</label><input type="date" name="birthday"><BR>
         <input type="hidden" name="_method" value="put">
         <input type="submit" value="提交">
     </form>
